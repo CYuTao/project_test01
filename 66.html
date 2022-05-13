@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input class="abc" type="text" value="123">
+    <script>
+        // function a(){
+        //     let value = document.querySelector('.abc').value
+        //     alert(value)
+        // }
+        // a()
+        let abj={
+            name:'陈堉涛'
+        }
+        function Cat(name){
+            this.name=name
+            this.drink=function(){
+                console.log(this.name+'666');
+            }
+
+        }
+        // class people{
+        //     constructor()
+        // }
+        let cat = new Cat('猫')
+        cat.drink()
+        // console.log(cat.name);
+        function Dog(){
+            this.drink=function(){
+                console.log('666');
+            }
+
+        }
+        Cat.prototype=abj
+        Cat.prototype.constructor=Cat
+        Dog.prototype=abj
+        Dog.prototype.constructor=Dog
+
+        // let cat = new Cat()
+        let dog = new Dog()
+
+        // console.log(Cat);
+        // console.log(cat);
+        // let a='name'
+        // cat.name='修改'
+        // console.log(cat.name);
+        
+        // console.log(dog.name);
+    </script>
+</body>
+</html>
